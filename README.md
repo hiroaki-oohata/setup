@@ -105,3 +105,10 @@ https://code.visualstudio.com/
 ## Docker
 ここまで行けるかわからないので放置  
 
+# supplement
+## ブランチを保護したい  
+mainブランチへ直接Pushできないように保護する方法  
+https://zenn.dev/snowcait/articles/42bb6b56c806da
+
+
+
