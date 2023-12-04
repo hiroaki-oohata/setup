@@ -29,6 +29,11 @@ Ubuntu 22.04.2 LTS が安定していて、利用者が多いです。
 ※初回起動はセットアップに時間がかかります。（5分程度？）  
 ![Ubuntu](Images/Ubuntu2204-01.png)
 
+5. UbuntuのVesionを確認する  
+```bash  
+lsb_release -a
+```  
+
 
 ### Mac
 Ubuntu入れる必要は無い説あり。調査中。
@@ -40,7 +45,7 @@ Ubuntu入れる必要は無い説あり。調査中。
 詳しいことは別のサイトを参照しながら進めてください。  
 　（参考）https://qiita.com/ayatokura/items/9eabb7ae20752e6dc79d
 
-```
+```bash
 https://github.com/
 ```
 
@@ -60,26 +65,43 @@ https://github.com/
 1. インストール  
 まずはUbuntu上で以下のコマンドを打ってみます。
 Versionが返ってきたらすでにインストールされています。
-```
+```bash
 git version
 ```
-もし、インストールされていなければ、Ubuntu上でこのコマンドを実行するだけ。  
+- もし、インストールされていなければ、Ubuntu上でこのコマンドを実行するだけ。  
 とても簡単。  
-(念のため、実行しておいても良い)  
-```
+(念のため、実行しておいても良い)   
+
+```bash
 sudo apt update
 sudo apt-get install git
 ```
 
 2. 初期設定  
 [GitHub](#github)で作成したアカウントを登録します。  
-```
+```bash
 git config --global user.name "yamada-taro"
 git config --global user.email xxx@yahoo.co.jp
 ```
 
-## VSCode
+## VSCode(ホストOSへインストール)
 様々な拡張機能が備わっており、これひとつで開発可能な統合開発環境です。  
+1. インストール  
+以下からインストーラを取得します。  
+インストールを実施。
+```bash
+https://code.visualstudio.com/
+```
+2. VScodeを起動して拡張機能を導入
+- Japanese Language Pack for Visual Studio Code
+- Remote-WSL
+- Git Graph
+- Git History
+- Dev Containers
+- Docker
+- Bazel
+- Draw.io Integration
 
-
+## Docker
+ここまで行けるかわからないので放置  
 
