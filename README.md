@@ -105,6 +105,41 @@ https://code.visualstudio.com/
 ## Docker
 ここまで行けるかわからないので放置  
 
+## Jenkins
+1. WSL2(Ubuntu)側で以下のコマンドを順番に実行
+```
+$ sudo apt -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+# JAVA
+$ sudo apt -y install openjdk-8-jdk
+$ sudo apt -y install openjdk-11-jre-headless
+# Jenkins
+$ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add
+$ sudo bash -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+$ sudo apt update
+$ sudo apt install jenkins
+# Update Firewall to enable Jenkins service
+$ sudo ufw enable
+$ sudo ufw allow 8080 # whatever port number you like
+$ Check the status of your port:
+$ sudo ufw status
+# Run Jenkins server
+$ sudo service jenkins start
+# この後、Winodwsブラウザのhttp://localhost:8080/ からJenkinsにアクセスできる
+# できない場合は JenkinsにWSLをpower shellから`wsl.exe --shutdown` で再起動してから再度jenkins startしてみる
+# 初期パスワード確認
+$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+- 以下の画面が出ればOK  
+![MicrosoftStore](Images/Jenkins_first.png)
+- 上記に初期パスワードを入力する  
+
+2. 次にプラグインのインストール確認画面が表示される。  
+「Install suggested plugins」を選択する。
+
+3. 自動的にプラグインのダウンロード＆インストールが始まるのでインストールが完了するまで待つ。  
+
+4. 初期Adminユーザ作成画面が表示されるので必要事項を入力して[Save and Continue]ボタンを押す。  
+
 # supplement
 ## ブランチを保護したい  
 mainブランチへ直接Pushできないように保護する方法  
