@@ -10,26 +10,35 @@ Linuxは開発する上で安定しており、様々なツールが用意できるので大変便利です。
 ### Windows
 1. WSL2を有効化する
 起動する前にWSL2を有効化しておく必要があります。  
-※再起動が必要になります。  
+<span style="color: red; ">※再起動が必要になります。</span>  
 （参考）https://www.kagoya.jp/howto/it-glossary/develop/wsl2_linux/  
     1. Linuxインストール前の準備を行う  
     1. WSL2用Linuxカーネルをインストールする  
     1. WSL2を既定のバージョンで利用できるようにする  
+       ※ここでエラーが出る場合は1.の設定を見直して再起動をしましょう。  
+       ※WSL2が使えるバージョンはWindows10（64bit版）以降です。  
+       ※32bit版の場合はversion 1 のままとしてください。  
 
-2. MicrosoftStoreを起動する  
+1. MicrosoftStoreを起動する  
 ![MicrosoftStore](Images/MicrosoftStore.png)
 
-3. Ubuntuで検索する  
-Ubuntu 22.04.2 LTS が安定していて、利用者が多いです。
+1. Ubuntuで検索する  
+Ubuntu 22.04.X LTS が安定していて、利用者が多いです。  
+※どれを使用しても問題ありません。  
+※versionの記述がないUbuntuはversionが固定されていないのでアップグレードすることが可能です。  
+※複数インストールしても差し支えありません。(筆者は複数インストールしています)  
 ![Ubuntu](Images/Ubuntu_Install.png)
 
-4. 起動する  
+1. 起動する  
 ユーザー名、パスワードを決めるよう促される。  
-※必ず入力する。うっかり画面を閉じてしまわないよう注意。  
+※必ず入力する。  
+※ユーザー名は英字のみ使用可。  
+※パスワード入力時にはカーソルが動かないが入力できている。  
+※うっかり画面を閉じてしまわないよう注意。閉じてしまったらアンインストールして再インストールから実施。  
 ※初回起動はセットアップに時間がかかります。（5分程度？）  
 ![Ubuntu](Images/Ubuntu2204-01.png)
 
-5. UbuntuのVesionを確認する  
+1. UbuntuのVesionを確認する  
 ```bash  
 lsb_release -a
 ```  
@@ -48,16 +57,26 @@ Ubuntu入れる必要は無い説あり。調査中。
 ```bash
 https://github.com/
 ```
+　（注意点）  
+　　・アカウント名は重複できない（グリーンになるように入力する）  
+　　・スペースは使用不可  
 
 2. サインイン  
 サインインに成功するか確認します。  
+⇒ダッシュボードが表示されるかと思います。  
 
-3. トークンの発行  
+3. (勉強会のみ)アカウント名をチャットに貼ってください。  
+   勉強会で使用するリポジトリへの書き込み権限を付与します。  
+
+4. トークンの発行  
 リポジトリのクローンやプッシュなど、あらゆる場面でトークンの入力を求められます。  
 トークンは再発行できますが、面倒なので無くさないように管理します。  
+※classic版とbeta版がありますが、今回はclassic版で進めます。  
+※期限設定はカスタムで長くすることもできます。（筆者は12月31日にしています）  
 ※詳しいことは別のサイトを参照しながら進めてください。  
 　（参考）https://capybara-notebook.com/github_accesstoken/
-
+※ブラウザによって勝手に翻訳されたりしてしまう現象があるそうです。  
+　やりにくい場合はブラウザを変えると良いかもしれません。  
 
 ## Git（Ubuntuへインストール）
 リポジトリをクローンするなどの操作に使用します。
@@ -83,6 +102,13 @@ sudo apt-get install git
 git config --global user.name "yamada-taro"
 git config --global user.email xxx@yahoo.co.jp
 ```
+3. 確認  
+登録できているか不安な場合は以下を実行します。  
+さきほど登録した情報が出力されるはずです。  
+```bash
+git config --global user.name
+git config --global user.email
+```
 
 ## VSCode(ホストOSへインストール)
 様々な拡張機能が備わっており、これひとつで開発可能な統合開発環境です。  
@@ -94,7 +120,7 @@ https://code.visualstudio.com/
 ```
 2. VScodeを起動して拡張機能を導入
 - Japanese Language Pack for Visual Studio Code
-- Remote-WSL
+- Remote-WSL ( ←ペンギンマークの”WSL”というものが対象です )
 - Git Graph
 - Git History
 - Dev Containers
