@@ -102,7 +102,7 @@ https://code.visualstudio.com/
 - Bazel
 - Draw.io Integration
 
-## Docker
+## Docker（Ubuntuへインストール）
 開発者の開発環境を統一することや、実行環境の違いを吸収するのに有効です。  
 ここではWSL2へのインストールを説明します。
 (いろんな方法があるのでネットでググってもらうのでもOK)
