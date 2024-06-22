@@ -103,7 +103,24 @@ https://code.visualstudio.com/
 - Draw.io Integration
 
 ## Docker
-ここまで行けるかわからないので放置  
+開発者の開発環境を統一することや、実行環境の違いを吸収するのに有効です。  
+ここではWSL2へのインストールを説明します。
+(いろんな方法があるのでネットでググってもらうのでもOK)
+1. 以下のコマンドを順番に実行（WSL2）  
+インストールのスクリプトをDLして実行します。  
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+```
+
+2. インストールできたことを確認（WSL2）  
+hello-worldをDLして実行します。  
+```bash
+sudo docker run hello-world
+```
+実行結果例）  
+<img src="Images/docker_run.png" width="50%">
+
 
 ## Jenkins
 1. WSL2(Ubuntu)側で以下のコマンドを順番に実行
