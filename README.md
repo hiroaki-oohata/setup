@@ -151,8 +151,13 @@ sudo docker run hello-world
 
 
 ## Jenkins
-1. WSL2(Ubuntu)側で以下のコマンドを順番に実行
+1. WSL2(Ubuntu)側で以下のコマンドを順番に実行  
+   - #はコメント行です。  
+   - $が実行行です。
+   - 一つひとつ確実に実行してください。
+   - 途中でエラーが出た場合は、前段の作業ができていない可能性が高いです。再度最初から実行してください。
 ```
+$ sudo apt update
 $ sudo apt -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 # JAVA
 $ sudo apt -y install openjdk-8-jdk
@@ -178,12 +183,13 @@ $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ![MicrosoftStore](Images/Jenkins_first.png)
 - 上記に初期パスワードを入力する  
 
-2. 次にプラグインのインストール確認画面が表示される。  
+1. 次にプラグインのインストール確認画面が表示される。  
 「Install suggested plugins」を選択する。
 
-3. 自動的にプラグインのダウンロード＆インストールが始まるのでインストールが完了するまで待つ。  
+1. 自動的にプラグインのダウンロード＆インストールが始まるのでインストールが完了するまで待つ。  
+   ※失敗したらリトライすれば成功するそうです。  
 
-4. 初期Adminユーザ作成画面が表示されるので必要事項を入力して[Save and Continue]ボタンを押す。  
+2. 初期Adminユーザ作成画面が表示されるので必要事項を入力して[Save and Continue]ボタンを押す。  
 
 # supplement
 ## ブランチを保護したい  
