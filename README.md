@@ -8,7 +8,7 @@ Linuxは開発する上で安定しており、様々なツールが用意できるので大変便利です。
 これを機会にLinuxを扱えるようになりましょう。  
 (インストールに時間がかかるのでこれから始めます)  
 ### Windows
-1. WSL2を有効化する
+1. WSL2を有効化する  
 起動する前にWSL2を有効化しておく必要があります。  
 <span style="color: red; ">※再起動が必要になります。</span>  
 （参考）https://www.kagoya.jp/howto/it-glossary/develop/wsl2_linux/  
@@ -20,18 +20,18 @@ Linuxは開発する上で安定しており、様々なツールが用意できるので大変便利です。
        ※32bit版の場合はversion 1 のままとしてください。  
 
 1. MicrosoftStoreを起動する  
-![MicrosoftStore](Images/MicrosoftStore.png)
+![MicrosoftStore](Images/MicrosoftStore.png)  
 
 1. Ubuntuで検索する  
 Ubuntu 22.04.X LTS が安定していて、利用者が多いです。  
 ※どれを使用しても問題ありません。  
 ※versionの記述がないUbuntuはversionが固定されていないのでアップグレードすることが可能です。  
 ※複数インストールしても差し支えありません。(筆者は複数インストールしています)  
-![Ubuntu](Images/Ubuntu_Install.png)
+![Ubuntu](Images/Ubuntu_Install.png)  
 
 1. 起動する  
 ユーザー名、パスワードを決めるよう促される。  
-![Ubuntu](Images/Ubuntu2204-01.png)
+![Ubuntu](Images/Ubuntu2204-01.png)  
 ※必ず入力する。  
 ※ユーザー名は英字のみ使用可。  
 ※パスワード入力時にはカーソルが動かないが入力できている。  
