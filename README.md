@@ -156,12 +156,14 @@ sudo docker run hello-world
    - $が実行行です。
    - 一つひとつ確実に実行してください。
    - 途中でエラーが出た場合は、前段の作業ができていない可能性が高いです。再度最初から実行してください。
+   - Ubuntuの最新版をインストールした場合、以下のKeyを取得しておく必要があります。https://www.jenkins.io/blog/2023/03/27/repository-signing-keys-changing/
 ```
 $ sudo apt update
 $ sudo apt -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 # JAVA
 $ sudo apt -y install openjdk-8-jdk
 $ sudo apt -y install openjdk-11-jre-headless
+$ sudo apt -y install openjdk-17-jre-headless
 # Jenkins
 $ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add
 $ sudo bash -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
@@ -170,7 +172,7 @@ $ sudo apt install jenkins
 # Update Firewall to enable Jenkins service
 $ sudo ufw enable
 $ sudo ufw allow 8080 # whatever port number you like
-$ Check the status of your port:
+# Check the status of your port:
 $ sudo ufw status
 # Run Jenkins server
 $ sudo service jenkins start
@@ -189,7 +191,7 @@ $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 1. 自動的にプラグインのダウンロード＆インストールが始まるのでインストールが完了するまで待つ。  
    ※失敗したらリトライすれば成功するそうです。  
 
-2. 初期Adminユーザ作成画面が表示されるので必要事項を入力して[Save and Continue]ボタンを押す。  
+1. 初期Adminユーザ作成画面が表示されるので必要事項を入力して[Save and Continue]ボタンを押す。  
 
 # supplement
 ## ブランチを保護したい  
